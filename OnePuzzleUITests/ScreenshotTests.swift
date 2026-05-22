@@ -5,6 +5,7 @@ final class ScreenshotTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testCaptureScreenshots() {
         let app = XCUIApplication()
         setupSnapshot(app)

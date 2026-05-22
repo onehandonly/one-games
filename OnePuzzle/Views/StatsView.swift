@@ -1,8 +1,7 @@
 import SwiftUI
-import SwiftData
 
 struct StatsView: View {
-    @Query private var streakStore: [StreakStore]
+    @Environment(StreakStore.self) private var streakStore
     @Environment(\.dismiss) private var dismiss
     @Environment(DailyPuzzleService.self) private var puzzle
 
@@ -11,10 +10,10 @@ struct StatsView: View {
             VStack(spacing: 24) {
                 streakSection
                 Divider()
-                    .foregroundColor(.appBorder)
+                    .foregroundStyle(Color.appBorder)
                 statsGrid
                 Divider()
-                    .foregroundColor(.appBorder)
+                    .foregroundStyle(Color.appBorder)
                 guessDistribution
             }
             .padding(AppLayout.padding)
@@ -24,7 +23,7 @@ struct StatsView: View {
                     Button(NSLocalizedString("common.close", value: "Close", comment: "Close")) {
                         dismiss()
                     }
-                    .foregroundColor(.appTextSecondary)
+                    .foregroundStyle(Color.appTextSecondary)
                 }
             }
         }
@@ -33,11 +32,11 @@ struct StatsView: View {
     private var streakSection: some View {
         HStack(spacing: 48) {
             StreakCounterView(
-                value: streakStore.first?.currentStreak ?? 0,
+                value: streakStore.currentStreak,
                 label: NSLocalizedString("stats.current-streak", value: "Current", comment: "Current streak")
             )
             StreakCounterView(
-                value: streakStore.first?.longestStreak ?? 0,
+                value: streakStore.longestStreak,
                 label: NSLocalizedString("stats.longest-streak", value: "Best", comment: "Longest streak")
             )
         }
@@ -46,11 +45,11 @@ struct StatsView: View {
     private var statsGrid: some View {
         HStack(spacing: 24) {
             statItem(
-                value: "\(streakStore.first?.totalGamesPlayed ?? 0)",
+                value: "\(streakStore.totalGamesPlayed)",
                 label: NSLocalizedString("stats.played", value: "Played", comment: "Games played")
             )
             statItem(
-                value: "\(Int((streakStore.first?.winRate ?? 0) * 100))%",
+                value: "\(Int(streakStore.winRate * 100))%",
                 label: NSLocalizedString("stats.win-rate", value: "Win %", comment: "Win rate")
             )
         }
@@ -60,10 +59,10 @@ struct StatsView: View {
         VStack(spacing: 4) {
             Text(value)
                 .font(AppFont.streakNumber)
-                .foregroundColor(.appTextPrimary)
+                .foregroundStyle(Color.appTextPrimary)
             Text(label)
                 .font(AppFont.caption)
-                .foregroundColor(.appTextSecondary)
+                .foregroundStyle(Color.appTextSecondary)
         }
     }
 
@@ -71,16 +70,16 @@ struct StatsView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(NSLocalizedString("stats.guess-distribution", value: "Guess Distribution", comment: "Stats heading"))
                 .font(AppFont.headline)
-                .foregroundColor(.appTextPrimary)
+                .foregroundStyle(Color.appTextPrimary)
 
-            let dist = streakStore.first?.guessDistribution ?? [:]
+            let dist = streakStore.guessDistribution
             ForEach(1..<7, id: \.self) { attempt in
                 let count = dist[attempt] ?? 0
                 let maxCount = dist.values.max() ?? 1
                 HStack(spacing: 8) {
                     Text("\(attempt)")
                         .font(AppFont.caption)
-                        .foregroundColor(.appTextSecondary)
+                        .foregroundStyle(Color.appTextSecondary)
                         .frame(width: 16)
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
@@ -92,7 +91,7 @@ struct StatsView: View {
                             if count > 0 {
                                 Text("\(count)")
                                     .font(AppFont.caption)
-                                    .foregroundColor(.white)
+                                    .foregroundStyle(Color.white)
                                     .padding(.leading, 8)
                             }
                         }

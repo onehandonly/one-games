@@ -60,19 +60,56 @@ extension UIColor {
 }
 
 // MARK: - Typography tokens
-enum AppFont {
+enum Typography {
+    static let display = Font.system(.largeTitle, design: .rounded, weight: .bold)
+    static let title = Font.system(.title, design: .rounded, weight: .bold)
     static let headline = Font.system(.title3, design: .rounded, weight: .bold)
-    static let puzzleCell = Font.system(.title2, design: .rounded, weight: .bold)
     static let body = Font.system(.body, design: .default, weight: .regular)
     static let caption = Font.system(.caption, design: .default, weight: .regular)
-    static let streakNumber = Font.system(.largeTitle, design: .rounded, weight: .bold)
+    static let puzzleDigit = Font.system(.title2, design: .rounded, weight: .bold)
 }
 
-// MARK: - Layout tokens
+// MARK: - Spacing tokens
+enum Spacing {
+    static let xs: CGFloat = 4
+    static let sm: CGFloat = 8
+    static let md: CGFloat = 16
+    static let lg: CGFloat = 24
+    static let xl: CGFloat = 32
+    static let xxl: CGFloat = 48
+}
+
+// MARK: - Radius tokens
+enum Radius {
+    static let sm: CGFloat = 8
+    static let md: CGFloat = 12
+}
+
+// MARK: - Elevation tokens
+enum Elevation {
+    static let e1: CGFloat = 2
+}
+
+// MARK: - Motion tokens
+enum Motion {
+    static let standard: TimeInterval = 0.3
+    static let celebrate: TimeInterval = 0.6
+}
+
+// MARK: - Layout tokens (legacy)
 enum AppLayout {
     static let tapTarget: CGFloat = 44
     static let gridSpacing: CGFloat = 6
     static let cornerRadius: CGFloat = 10
     static let padding: CGFloat = 16
     static let cardCornerRadius: CGFloat = 16
+}
+
+// MARK: - Typography tokens (legacy)
+enum AppFont {
+    static let headline = Typography.headline
+    static let puzzleCell = Typography.puzzleDigit
+    static let body = Typography.body
+    static let caption = Typography.caption
+    static let streakNumber = Font.system(.largeTitle, design: .rounded, weight: .bold)
 }

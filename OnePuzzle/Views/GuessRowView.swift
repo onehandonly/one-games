@@ -5,6 +5,7 @@ struct GuessRowView: View {
     let feedback: [LetterFeedback]
     let targetLength: Int
     let isActive: Bool
+    let showFirstCellHint: Bool = false
 
     var body: some View {
         HStack(spacing: AppLayout.gridSpacing) {
@@ -20,6 +21,7 @@ struct GuessRowView: View {
             ? guess[guess.index(guess.startIndex, offsetBy: index)]
             : " "
         let fb: LetterFeedback? = index < feedback.count ? feedback[index] : nil
+        let isFirstCell = index == 0 && guess.isEmpty && isActive
 
         ZStack {
             RoundedRectangle(cornerRadius: AppLayout.cornerRadius)
@@ -38,6 +40,7 @@ struct GuessRowView: View {
         }
         .frame(maxWidth: 64)
         .minimumScaleFactor(0.6)
+        .firstCellHint(isFirstCell: isFirstCell, shouldShow: showFirstCellHint)
     }
 
     private func backgroundColor(for fb: LetterFeedback?) -> Color {

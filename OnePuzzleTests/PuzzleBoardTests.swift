@@ -107,7 +107,7 @@ final class PuzzleBoardTests: XCTestCase {
         XCTAssertEqual(mapping["B"], .correct)
         XCTAssertEqual(mapping["C"], .misplaced)
 
-        _ = board.submitGuess("ACDEF")
+        _ = board.submitGuess("ABCDE")
         mapping = board.keyboardMapping
         // C was misplaced, now correct — mapping must reflect .correct, not .misplaced
         XCTAssertEqual(mapping["C"], .correct)

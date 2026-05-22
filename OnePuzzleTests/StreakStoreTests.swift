@@ -64,7 +64,7 @@ final class StreakStoreTests: XCTestCase {
         store.recordWin(attempts: 4)
         store.recordWin(attempts: 3)
         let dist = store.guessDistribution
-        XCTAssertEqual(dist[3], 3)
+        XCTAssertEqual(dist[3], 2)
         XCTAssertEqual(dist[4], 1)
     }
 

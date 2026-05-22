@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'OnePuzzleUITests/**'
+      - 'OnePuzzle/**'
       - 'fastlane/Snapfile'
       - 'fastlane/screenshots/**'
       - '.github/workflows/screenshots.yml'

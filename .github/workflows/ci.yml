@@ -25,8 +25,10 @@ jobs:
       - name: Install Ruby dependencies
         run: bundle install
 
+      - name: Install XcodeGen
+        run: brew install xcodegen
       - name: Generate Xcode project
-        run: bundle exec xcodegen
+        run: xcodegen generate
 
       - name: Build and test
         run: bundle exec fastlane tests
@@ -48,8 +50,10 @@ jobs:
       - name: Install Ruby dependencies
         run: bundle install
 
+      - name: Install XcodeGen
+        run: brew install xcodegen
       - name: Generate Xcode project
-        run: bundle exec xcodegen
+        run: xcodegen generate
 
       - name: Build and upload to TestFlight
         run: bundle exec fastlane beta
@@ -75,8 +79,10 @@ jobs:
       - name: Install Ruby dependencies
         run: bundle install
 
+      - name: Install XcodeGen
+        run: brew install xcodegen
       - name: Generate Xcode project
-        run: bundle exec xcodegen
+        run: xcodegen generate
 
       - name: Build Ad Hoc
         run: bundle exec fastlane build_adhoc

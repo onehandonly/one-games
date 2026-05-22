@@ -14,27 +14,34 @@ final class ScreenshotTests: XCTestCase {
         sleep(3)
         snapshot("01Welcome")
 
-        let cont = app.buttons["Continue"]
-        if cont.waitForExistence(timeout: 15) { cont.tap() }
+        // Welcome -> How it works (retry the Continue tap until it advances)
+        var attempts = 0
+        while app.buttons["Continue"].waitForExistence(timeout: 10) && attempts < 4 {
+            let c = app.buttons["Continue"]
+            if c.isHittable { c.tap() }
+            sleep(1)
+            attempts += 1
+            if !app.buttons["Continue"].exists { break }
+        }
         sleep(1)
         snapshot("02HowItWorks")
 
+        // How it works -> today's puzzle
         let start = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Start'")).firstMatch
         if start.waitForExistence(timeout: 15) { start.tap() }
-        sleep(1)
+        sleep(2)
 
-        // Type letters one at a time with a settle, avoiding edge keys; submit for colorful feedback.
         func type(_ s: String) {
             for ch in s {
-                let key = app.buttons[String(ch)]
-                if key.waitForExistence(timeout: 3) { key.tap(); usleep(250_000) }
+                let k = app.buttons[String(ch)]
+                if k.waitForExistence(timeout: 3) { k.tap(); usleep(250_000) }
             }
         }
-        type("HOUSE")          // no left-edge keys; 5 letters
+        type("HOUSE")
         let enter = app.buttons["Enter"]
         if enter.waitForExistence(timeout: 3) { enter.tap() }
         sleep(1)
-        type("TRI")            // partial second guess, middle keys only
+        type("TRI")
         sleep(1)
         snapshot("03Puzzle")
     }

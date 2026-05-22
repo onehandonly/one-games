@@ -54,9 +54,8 @@ struct HowItWorksScreen: View {
                 .padding(.top, Spacing.lg)
                 .padding(.bottom, Spacing.xl)
             }
-
-            Spacer(minLength: 0)
-
+        }
+        .safeAreaInset(edge: .bottom) {
             Button {
                 withAnimation(reduceMotion ? nil : .easeInOut(duration: Motion.standard)) {
                     firstRunState.hasSeenHowItWorks = true
@@ -71,7 +70,9 @@ struct HowItWorksScreen: View {
                     .clipShape(RoundedRectangle(cornerRadius: Radius.sm))
             }
             .padding(.horizontal, Spacing.lg)
+            .padding(.top, Spacing.sm)
             .padding(.bottom, Spacing.lg)
+            .background(Color.appSurface)
             .accessibilityLabel("Start today's puzzle")
             .accessibilityHint("Opens the daily puzzle")
         }

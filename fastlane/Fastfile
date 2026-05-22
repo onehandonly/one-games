@@ -7,7 +7,6 @@ platform :ios do
 
   desc "Run all unit tests"
   lane :tests do
-    xcodegen
     run_tests(
       project: "OnePuzzle.xcodeproj",
       scheme: "OnePuzzle",
@@ -18,7 +17,6 @@ platform :ios do
 
   desc "Build Ad Hoc distribution for internal testing"
   lane :build_adhoc do
-    xcodegen
     build_app(
       scheme: "OnePuzzle",
       project: "OnePuzzle.xcodeproj",
@@ -30,7 +28,6 @@ platform :ios do
 
   desc "Build and upload to TestFlight"
   lane :beta do
-    xcodegen
     build_app(
       scheme: "OnePuzzle",
       project: "OnePuzzle.xcodeproj",
@@ -44,7 +41,6 @@ platform :ios do
 
   desc "Build and upload to App Store (future use)"
   lane :release do
-    xcodegen
     build_app(
       scheme: "OnePuzzle",
       project: "OnePuzzle.xcodeproj",

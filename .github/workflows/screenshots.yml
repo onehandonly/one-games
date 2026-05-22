@@ -1,0 +1,33 @@
+name: Screenshots
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'OnePuzzleUITests/**'
+      - 'fastlane/Snapfile'
+      - '.github/workflows/screenshots.yml'
+jobs:
+  screenshots:
+    name: Capture Screenshots
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Install Ruby dependencies
+        run: bundle install
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate Xcode project
+        run: xcodegen generate
+      - name: Capture screenshots
+        run: bundle exec fastlane screenshots
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-store-screenshots
+          path: fastlane/screenshots

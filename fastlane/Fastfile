@@ -53,6 +53,11 @@ platform :ios do
     )
   end
 
+  desc "Generate App Store screenshots"
+  lane :screenshots do
+    capture_screenshots
+  end
+
   error do |lane, exception|
     slack(
       message: "OnePuzzle CI: #{lane} failed — #{exception.message}",

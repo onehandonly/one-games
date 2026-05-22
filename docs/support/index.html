@@ -1,138 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OnePuzzle — Support</title>
-  <style>
-    :root {
-      --bg: #f8f8f2;
-      --fg: #1a1a1a;
-      --accent: #5a67d8;
-      --card: #ffffff;
-      --border: #e2e8f0;
-      --muted: #64748b;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-    .container {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-    header p {
-      color: var(--muted);
-      margin-top: 0.5rem;
-    }
-    section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    section h2 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-    p { margin-bottom: 0.75rem; }
-    p:last-child { margin-bottom: 0; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul {
-      padding-left: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-    li { margin-bottom: 0.4rem; }
-    .contact-link {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 0.6rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 0.5rem;
-    }
-    .contact-link:hover { text-decoration: none; opacity: 0.9; }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 3rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - One Puzzle</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #222;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #222;
+            margin-top: 30px;
+        }
+        .contact-box {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid #007AFF;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .faq-item {
+            margin: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 8px;
+        }
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>OnePuzzle</h1>
-      <p>Daily Logic Puzzle — Support</p>
-    </header>
+    <h1>Support</h1>
 
-    <section>
-      <h2>Contact Us</h2>
-      <p>Having trouble with OnePuzzle? We're here to help. Email us and we'll get back to you within 1–2 business days.</p>
-      <a class="contact-link" href="mailto:support@onehandwonder.com">support@onehandwonder.com</a>
-    </section>
+    <h2>Get Help</h2>
+    <p>Thank you for playing One Puzzle! We're here to help if you have any questions or need assistance.</p>
 
-    <section>
-      <h2>Frequently Asked Questions</h2>
+    <div class="contact-box">
+        <h3 style="margin-top: 0;">Contact Us</h3>
+        <p>Email: <a href="mailto:support@one-games.com">support@one-games.com</a></p>
+        <p>We'll get back to you as soon as possible.</p>
+    </div>
 
-      <p><strong>How often does a new puzzle appear?</strong><br>
-      A fresh puzzle is available every day at midnight in your local time zone. Everyone around the world solves the same puzzle on the same day.</p>
+    <h2>Frequently Asked Questions</h2>
 
-      <p><strong>Can I play yesterday's puzzle?</strong><br>
-      The current version of OnePuzzle is designed around the daily format — only today's puzzle is available in the free tier. Past puzzles may be unlocked in a future update.</p>
+    <div class="faq-item">
+        <div class="faq-question">How does One Puzzle work?</div>
+        <p>One Puzzle presents you with a new logic puzzle every day. Each puzzle has a unique solution, and you have until midnight to solve it. Share your results with friends and compare your solve times!</p>
+    </div>
 
-      <p><strong>My streak reset even though I solved the puzzle. What happened?</strong><br>
-      Streaks are calculated using the device clock. If you travel across time zones or change your device's date/time settings, the streak counter may reset. We are working on improvements to make this more robust.</p>
+    <div class="faq-item">
+        <div class="faq-question">Can I sync my progress across devices?</div>
+        <p>Yes! You can optionally enable cross-device sync by signing in with your Apple ID in the App. This will sync your solve history across all your devices. If you don't enable sync, your solve history stays on your device locally.</p>
+    </div>
 
-      <p><strong>How do I share my result?</strong><br>
-      Tap the Share button on the result screen. This copies a text summary of your solve to the clipboard or opens the iOS Share Sheet — no image permissions required.</p>
+    <div class="faq-item">
+        <div class="faq-question">Is my data private?</div>
+        <p>Absolutely. We don't track you, show you ads, or share your data with third parties. Your solve history stays on your device by default. Only if you enable Sign in with Apple sync will your data be stored on our servers. For complete details, please read our <a href="/privacy">Privacy Policy</a>.</p>
+    </div>
 
-      <p><strong>Does the app collect any personal data?</strong><br>
-      No. OnePuzzle does not collect, store, or share any personal data. Your puzzle progress and streak are stored only on your device (or in your personal iCloud if you enable iCloud sync). See our <a href="/privacy/">Privacy Policy</a> for details.</p>
+    <h2>Privacy & Policies</h2>
+    <p>For information about how we handle your data, please review our <a href="/privacy">Privacy Policy</a>.</p>
 
-      <p><strong>How do I restore a purchase?</strong><br>
-      Open OnePuzzle, go to Settings → Restore Purchases. Your App Store purchase history will be checked automatically.</p>
-
-      <p><strong>The app won't launch / crashes on startup. What should I do?</strong><br>
-      Please try:</p>
-      <ul>
-        <li>Force-quit the app and reopen it.</li>
-        <li>Restart your iPhone.</li>
-        <li>Check that your iOS version is 17.0 or later (required).</li>
-        <li>Delete and reinstall the app (your progress is backed up via iCloud if enabled).</li>
-      </ul>
-      <p>If the problem persists, email us at <a href="mailto:support@onehandwonder.com">support@onehandwonder.com</a> with your device model and iOS version.</p>
-    </section>
-
-    <section>
-      <h2>Privacy</h2>
-      <p>We take your privacy seriously. OnePuzzle does not run ads, does not track you, and does not share your data with third parties.</p>
-      <p><a href="/privacy/">Read our full Privacy Policy →</a></p>
-    </section>
-
-    <footer>
-      <p>OnePuzzle is made by One Hand Wonder LLC &middot; <a href="mailto:support@onehandwonder.com">support@onehandwonder.com</a></p>
-      <p style="margin-top:0.25rem;">&copy; 2026 One Hand Wonder LLC. All rights reserved.</p>
-    </footer>
-  </div>
+    <hr style="margin: 40px 0;">
+    <p style="text-align: center; color: #666; font-size: 14px;">Last updated: May 2026</p>
 </body>
 </html>

@@ -1,0 +1,185 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "common.close" : {
+      "comment" : "Close button",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "puzzle.header" : {
+      "comment" : "Daily puzzle number",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puzzle #%d"
+          }
+        }
+      }
+    },
+    "puzzle.not-solved" : {
+      "comment" : "Failed to solve",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not quite!"
+          }
+        }
+      }
+    },
+    "puzzle.see-you" : {
+      "comment" : "Dismiss puzzle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See you tomorrow!"
+          }
+        }
+      }
+    },
+    "puzzle.solved" : {
+      "comment" : "Solved in N attempts",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solved in %d/%d"
+          }
+        }
+      }
+    },
+    "share.puzzle-number" : {
+      "comment" : "Share puzzle number",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puzzle #%d"
+          }
+        }
+      }
+    },
+    "share.solved-in" : {
+      "comment" : "Solved in N/M",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solved in %d/%d"
+          }
+        }
+      }
+    },
+    "share.not-solved" : {
+      "comment" : "Failed to solve",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not solved"
+          }
+        }
+      }
+    },
+    "share.title" : {
+      "comment" : "Share button",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
+          }
+        }
+      }
+    },
+    "share.to-social" : {
+      "comment" : "Share puzzle result",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share Result"
+          }
+        }
+      }
+    },
+    "stats.current-streak" : {
+      "comment" : "Current streak",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current"
+          }
+        }
+      }
+    },
+    "stats.guess-distribution" : {
+      "comment" : "Stats heading",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guess Distribution"
+          }
+        }
+      }
+    },
+    "stats.longest-streak" : {
+      "comment" : "Longest streak",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Best"
+          }
+        }
+      }
+    },
+    "stats.played" : {
+      "comment" : "Games played",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Played"
+          }
+        }
+      }
+    },
+    "stats.win-rate" : {
+      "comment" : "Win rate",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Win %%"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+app_identifier "com.onepuzzle.app"
+apple_id ENV["APPLE_ID"]
+team_id ENV["APPLE_TEAM_ID"]
+itunes_connect_id ENV["APPLE_ITC_ID"]

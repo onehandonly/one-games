@@ -1,0 +1,66 @@
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    setup_circle_ci if ENV["CI"]
+  end
+
+  desc "Run all unit tests"
+  lane :tests do
+    xcodegen
+    run_tests(
+      project: "OnePuzzle.xcodeproj",
+      scheme: "OnePuzzle",
+      devices: ["iPhone 15"],
+      code_coverage: true
+    )
+  end
+
+  desc "Build Ad Hoc distribution for internal testing"
+  lane :build_adhoc do
+    xcodegen
+    build_app(
+      scheme: "OnePuzzle",
+      project: "OnePuzzle.xcodeproj",
+      export_method: "ad-hoc",
+      output_directory: "build/AdHoc",
+      clean: true
+    )
+  end
+
+  desc "Build and upload to TestFlight"
+  lane :beta do
+    xcodegen
+    build_app(
+      scheme: "OnePuzzle",
+      project: "OnePuzzle.xcodeproj",
+      export_method: "app-store-connect",
+      output_directory: "build/TestFlight"
+    )
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Build and upload to App Store (future use)"
+  lane :release do
+    xcodegen
+    build_app(
+      scheme: "OnePuzzle",
+      project: "OnePuzzle.xcodeproj",
+      export_method: "app-store",
+      output_directory: "build/Release"
+    )
+    upload_to_app_store(
+      skip_metadata: true,
+      skip_screenshots: true
+    )
+  end
+
+  error do |lane, exception|
+    slack(
+      message: "OnePuzzle CI: #{lane} failed — #{exception.message}",
+      success: false
+    ) if ENV["CI"]
+  end
+end

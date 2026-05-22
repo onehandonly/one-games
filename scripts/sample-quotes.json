@@ -1,0 +1,62 @@
+[
+  {
+    "quoteId": "E-01",
+    "plaintext": "The truth is rarely pure and never simple.",
+    "author": "Oscar Wilde",
+    "source": "The Importance of Being Earnest (1895)",
+    "scheduledDate": "2026-06-02",
+    "dayIndex": 1,
+    "difficulty": "E",
+    "riskFlag": "None"
+  },
+  {
+    "quoteId": "E-02",
+    "plaintext": "No man is an island, entire of itself.",
+    "author": "John Donne",
+    "source": "Devotions Upon Emergent Occasions (1624)",
+    "scheduledDate": "2026-06-03",
+    "dayIndex": 2,
+    "difficulty": "E",
+    "riskFlag": "None"
+  },
+  {
+    "quoteId": "E-05",
+    "plaintext": "The fear of death follows from the fear of life.",
+    "author": "Mark Twain",
+    "source": null,
+    "scheduledDate": "2026-06-04",
+    "dayIndex": 3,
+    "difficulty": "E",
+    "riskFlag": "None"
+  },
+  {
+    "quoteId": "M-01",
+    "plaintext": "The only way to have a friend is to be one.",
+    "author": "Ralph Waldo Emerson",
+    "source": "Essays: First Series (1841)",
+    "scheduledDate": "2026-06-05",
+    "dayIndex": 4,
+    "difficulty": "M",
+    "riskFlag": "None"
+  },
+  {
+    "quoteId": "M-11",
+    "plaintext": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates",
+    "source": "Plato, Apology (c. 399 BC)",
+    "scheduledDate": "2026-06-06",
+    "dayIndex": 5,
+    "difficulty": "M",
+    "riskFlag": "ATT"
+  },
+  {
+    "quoteId": "H-04",
+    "plaintext": "The fault, dear Brutus, is not in our stars, but in ourselves, that we are underlings.",
+    "author": "William Shakespeare",
+    "source": "Julius Caesar (1599)",
+    "scheduledDate": "2026-06-07",
+    "dayIndex": 6,
+    "difficulty": "H",
+    "riskFlag": "None"
+  }
+]

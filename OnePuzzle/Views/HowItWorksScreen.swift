@@ -94,6 +94,8 @@ struct HowItWorksScreen: View {
         .background(Color.appSurfaceElevated)
         .clipShape(RoundedRectangle(cornerRadius: Radius.md))
         .shadow(color: .black.opacity(0.04), radius: Elevation.e1, x: 0, y: 1)
+        .frame(maxWidth: 240)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, Spacing.lg)
     }
 

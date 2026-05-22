@@ -76,7 +76,7 @@ struct PuzzleBoard: Equatable {
 
     var keyboardMapping: [Character: GuessResult] {
         var mapping: [Character: GuessResult] = [:]
-        for fb in feedback.flatMap { $0 } {
+        for fb in feedback.flatMap({ $0 }) {
             let existing = mapping[fb.letter]
             if existing == .correct { continue }
             if fb.result == .correct {

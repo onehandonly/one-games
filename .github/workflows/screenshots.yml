@@ -6,6 +6,7 @@ on:
     paths:
       - 'OnePuzzleUITests/**'
       - 'fastlane/Snapfile'
+      - 'fastlane/screenshots/**'
       - '.github/workflows/screenshots.yml'
 jobs:
   screenshots:
@@ -19,8 +20,8 @@ jobs:
           xcode-version: latest-stable
       - name: Install Ruby dependencies
         run: bundle install
-      - name: Install XcodeGen
-        run: brew install xcodegen
+      - name: Install tools
+        run: brew install xcodegen imagemagick
       - name: Generate Xcode project
         run: xcodegen generate
       - name: Capture screenshots

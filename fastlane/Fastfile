@@ -56,6 +56,11 @@ platform :ios do
   desc "Generate App Store screenshots"
   lane :screenshots do
     capture_screenshots
+    begin
+      frame_screenshots(path: "./fastlane/screenshots")
+    rescue => ex
+      UI.error("frameit step failed; raw screenshots still available: #{ex}")
+    end
   end
 
   error do |lane, exception|

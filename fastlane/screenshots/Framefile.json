@@ -1,0 +1,11 @@
+{
+  "default": {
+    "background": "#0E0E12",
+    "title": { "color": "#FFFFFF" },
+    "padding": 64,
+    "title_below_image": false,
+    "show_complete_frame": false,
+    "font_scale_factor": 0.075
+  },
+  "data": []
+}

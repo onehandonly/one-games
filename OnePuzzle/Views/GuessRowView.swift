@@ -5,7 +5,7 @@ struct GuessRowView: View {
     let feedback: [LetterFeedback]
     let targetLength: Int
     let isActive: Bool
-    let showFirstCellHint: Bool = false
+    var showFirstCellHint: Bool = false
 
     var body: some View {
         HStack(spacing: AppLayout.gridSpacing) {

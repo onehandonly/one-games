@@ -36,8 +36,7 @@ struct KeyboardView: View {
             Text(String(char))
                 .font(.system(.caption, design: .rounded, weight: .bold))
                 .foregroundColor(textColor(for: char))
-                .frame(minWidth: 28, minHeight: AppLayout.tapTarget)
-                .padding(.horizontal, 4)
+                .frame(maxWidth: .infinity, minHeight: AppLayout.tapTarget)
                 .background(backgroundColor(for: char))
                 .clipShape(RoundedRectangle(cornerRadius: 6))
         }
@@ -51,12 +50,15 @@ struct KeyboardView: View {
             Text("Enter")
                 .font(.system(.caption2, design: .rounded, weight: .bold))
                 .foregroundColor(.white)
-                .frame(minWidth: 36, minHeight: AppLayout.tapTarget)
-                .padding(.horizontal, 6)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .padding(.horizontal, 4)
+                .frame(maxWidth: .infinity, minHeight: AppLayout.tapTarget)
                 .background(Color.appCorrect)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
         }
         .buttonStyle(.plain)
+        .layoutPriority(1)
     }
 
     private var deleteKey: some View {
@@ -66,12 +68,12 @@ struct KeyboardView: View {
             Image(systemName: "delete.left")
                 .font(.caption)
                 .foregroundColor(.appTextPrimary)
-                .frame(minWidth: 36, minHeight: AppLayout.tapTarget)
-                .padding(.horizontal, 6)
+                .frame(maxWidth: .infinity, minHeight: AppLayout.tapTarget)
                 .background(Color.appBorder)
                 .clipShape(RoundedRectangle(cornerRadius: 6))
         }
         .buttonStyle(.plain)
+        .layoutPriority(1)
     }
 
     private func backgroundColor(for char: Character) -> Color {

@@ -78,7 +78,7 @@ struct DailyPuzzleView: View {
 
     private var puzzleGrid: some View {
         VStack(spacing: AppLayout.gridSpacing) {
-            ForEach(0..<puzzle.board.maxAttempts, id: \.self) { row in
+            ForEach(Array(0..<puzzle.board.maxAttempts), id: \.self) { row in
                 let isActiveRow = row == puzzle.guesses.count
                 GuessRowView(
                     guess: row < puzzle.guesses.count

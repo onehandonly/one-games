@@ -1,3 +1,6 @@
+# Required repository secrets (Settings -> Secrets and variables -> Actions):
+#   ASC_KEY  ASC_KEY_ID  ASC_ISSUER_ID  APPLE_ID  APPLE_TEAM_ID  APPLE_ITC_ID
+#   MATCH_GIT_URL  MATCH_PASSWORD  MATCH_GIT_BASIC_AUTHORIZATION
 name: CI
 
 on:

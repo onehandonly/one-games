@@ -20,15 +20,21 @@ struct WelcomeScreen: View {
                     Text("One puzzle.\nEvery day.")
                         .font(Typography.display)
                         .foregroundStyle(Color.appTextPrimary)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                        .fixedSize(horizontal: false, vertical: true)
 
                     Text("A small moment\nof focus.")
                         .font(Typography.body)
                         .foregroundStyle(Color.appTextSecondary)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.6)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .accessibilityElement(children: .combine)
                 .accessibilityLabel("One puzzle. Every day. A small moment of focus.")
             }
-            .padding(.leading, Spacing.xl)
+            .padding(.horizontal, Spacing.xl)
             .frame(maxWidth: .infinity, alignment: .leading)
 
             Spacer()

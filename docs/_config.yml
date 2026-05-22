@@ -1,0 +1,12 @@
+# GitHub Pages configuration
+title: One Puzzle
+description: A daily logic puzzle game for iPhone
+url: "https://one-games.com"
+theme: jekyll-theme-minimal
+plugins: []
+
+# Disable Jekyll processing for non-markdown files
+exclude:
+  - "*.html"
+  - ".git"
+  - ".github"
